@@ -11,35 +11,80 @@
 <body>
     
     <div class="wrapper">
+        <span class="bg-animated"></span>
+        <span class="bg-animated2"></span>
+
         <div class="form-box login">
-            <h2>Login</h2>
-            <form action="#">
-                <div class="input-box">
+            <h2 class="animation"  style="--i:0; --j:21;">Cadastro</h2>
+
+            <form action="login.html" target="_blank">
+
+                <div class="input-box animation"  style="--i:1; --j:22;">
                     <input type="text" required>
                     <label>Nome de Usuário</label>
                     <i class='bx bxs-user'></i>
                 </div>
 
-                <div class="input-box">
+                <div class="input-box animation"  style="--i:2; --j:23;">
                     <input type="password" required>
                     <label>Senha</label>
                     <i class='bx bxs-lock-alt'></i>
                 </div>
 
-                <button type="submit" class="btn">Login</button>
+                <button type="submit" class="btn animation "  style="--i:3; --j:24;">Cadastrar-se</button>
 
-                <div class="logreg-link">
+                <div class="logreg-link animation" style="--i:4; --j:25;">
                     <p>Não tem uma conta? <a href="#" class="register-link">Inscrever-se</a></p>
+                </div>
+
+            </form>
+
+        </div>
+        <div class="info-text login">
+            <h2 class="animation" style="--i:0; --j:20;">Bem-Vindo<br><span>Novamente!</span></h2>
+            <p class="animation" style="--i:1; --j:21;">Faça o cadastro para confirmar sua inscrição.</p>
+        </div>
+
+
+        <div class="form-box register">
+            <h2 class="animation" style="--i:17; --j:0; ">Inscrever-se</h2>
+
+            <form action="inscrever.html" target="_blank">
+                
+                <div class="input-box animation" style="--i:18; --j:1;"  >
+                    <input type="text" required>
+                    <label>Nome de Usuário</label>
+                    <i class='bx bxs-user'></i>
+                </div>
+
+                <div class="input-box animation" style="--i:19; --j:2;">
+                    <input type="text" required>
+                    <label>E-mail</label>
+                    <i class='bx bxs-envelope'></i>
+                </div>
+
+                <div class="input-box animation" style="--i:20; --j:3;">
+                    <input type="password" required>
+                    <label>Senha</label>
+                    <i class='bx bxs-lock-alt'></i>
+                </div>
+
+                <button type="submit" class="btn animation" style="--i:21; --j:4;">Inscrever-se</button>
+
+                <div class="logreg-link animation" style="--i:22; --j:5;">
+                    <p>Já possui uma conta? <a href="#" class="login-link">Login</a></p>
                 </div>
             </form>
         </div>
 
-        <div class="info-text login">
-            <h2>Seja Bem-Vindo</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <div class="info-text register">
+            <h2 class="animation"  style="--i:17; --j:0;">Faça Aqui<br><span>Seu Cadastro!</span></h2>
+            <p class="animation"  style="--i:18; --j:1;">Inscreva-se para receber nossas Promoções.</p>
         </div>
 
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

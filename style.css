@@ -32,6 +32,8 @@ section{
 
 
 
+
+
 header{
     position: absolute;
     top: 0;
@@ -49,10 +51,11 @@ header .logo{
     left: 0px;
     top: 0px;
     transition: 0.3s ease-in-out;
+    font-family: 'Ephesis', cursive;
 }
 
 header .logo:hover{
-    transform: translateY(-10px);
+    transform: scale(1.1);
     
 }
 
@@ -112,6 +115,7 @@ header .navegation li a:hover{
 
 .container .text p{
     color: rgb(255, 255, 255);
+    line-height: 1.5;
 }
 .container .text a{
     display: inline-block;
@@ -131,7 +135,7 @@ header .navegation li a:hover{
     color: black;
     box-shadow: 0 0 25px aqua;
     background: rgb(0, 252, 231);
-    transform: translateY(-10px);
+    transform: scale(1.1);
 }
 
 .icons{

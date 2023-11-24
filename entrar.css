@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
+    font-family: 'Poppins', sans-serif;
 }
 
 body{
@@ -20,6 +21,8 @@ body{
     background: transparent;
     border: 2px solid #0ef;
     box-shadow: 0 0 25px #0ef;
+    overflow: hidden;
+   
 }
 
  .wrapper .form-box{
@@ -35,9 +38,51 @@ body{
 
 .wrapper .form-box.login{
     left: 0;
-    padding: 0 40px;
+    padding: 0 60px 0 40px;
+}
+
+.wrapper .form-box.login .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition:.7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.wrapper.active .form-box.login .animation{
+
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--i));
+}
+
+.wrapper .form-box.register{
+    right: 0;
+    padding: 0 40px 0 60px;
+    pointer-events: none;
 
 }
+
+.wrapper.active .form-box.register{
+    pointer-events: auto;
+}
+
+.wrapper .form-box.register .animation{
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: .7s;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.wrapper.active .form-box.register .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
+
 
 .form-box h2{
     font-size: 32px;
@@ -158,9 +203,8 @@ body{
 .wrapper .info-text{
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 60%;
     height: 100%;
-    background: red;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,14 +213,116 @@ body{
 
 .wrapper .info-text.login{
     right: 0;
+    text-align: right;
+    padding: 0 20px 100px 150px;
+    
+}
+
+
+.wrapper .info-text.login .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition:.7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.wrapper.active .info-text.login .animation{
+
+    transform: translateX(120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition-delay: calc(.1s * var(--i));
+}
+
+
+
+.wrapper .info-text.register{
+    left: 0;
+    text-align: left;
+    padding: 0 150px 60px 20px;
+    pointer-events: none;
 
 }
 
+.wrapper.active .info-text.register{
+    pointer-events: auto;
+}
+
+.wrapper .info-text.register .animation{
+    transform: translateX(-120%);
+    opacity: 0;
+    filter: blur(10px);
+    transition: .7s ease;
+    transition-delay: calc(.1s * var(--j));
+}
+
+.wrapper.active .info-text.register .animation{
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(.1s * var(--i));
+}
+
+
+
 .info-text h2{
-    font-size: 36px;
+    font-size: 31px;
     color: white;
     line-height: 1.3;
+    text-transform: uppercase;
+    padding: 0 0 25px
+    
+    
+}
+
+.info-text p{
+    font-size: 14px;
+    color: white;
+    line-height: 1.3;
+    padding: 0 0 20px;
     
 
+}
 
+.wrapper .bg-animated{
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 650px;
+    background: linear-gradient(45deg, #081b29, #0ef );
+    border-bottom: 3px solid #0ef;
+    transform: rotate(10deg) skewY(45deg);
+    transform-origin: bottom right;
+    transition: 1.5s ease;
+    transition-delay: 1.5s;
+    
+}
+
+
+
+.wrapper.active .bg-animated{
+    transform: rotate(0) skewY(0);
+    transition-delay: .5s;
+}
+
+.wrapper .bg-animated2{
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 800px;
+    background: #081b29;
+    border-top: 3px solid #0ef;
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom left;
+    transition: 1.5s ease;
+    transition-delay: .5s ;
+   
+}
+
+.wrapper.active .bg-animated2{
+    transform: rotate(-11deg) skewY(-45deg);
+    transition-delay: 1.1s;
 }
